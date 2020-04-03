@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('includes/head.ejs', {title:'Cadastro de Pizza'}) %> 
+<body>
+    <%- include('includes/header.ejs') %>
+
+    <main class="container d-flex justify-content-center align-items-center vh-75">
+        <%# 
+            título do formulário
+            Campo para o nome da pizza
+            Campo para o preço da pizza
+            button do tipo submit
+            a width do form sera fixa em 400px
+            form deverá ficar ao centro da tela, tanto na horizontal quanto na vertical
+        %>
+
+          <form action="/cardapio/cadastro" method="POST" enctype="multipart/form-data" class="form-cadastro">
+              <h2>Cadastro de pizza</h2>
+              <div class="form-group">
+                  <label for="">Nome da Pizza</label>
+                  <input type="text" class="form-control" id="nomePizza" name="nomePizza">
+              </div>
+              <div class="form-group">
+                <label for="precoPizza">Preço da Pizza</label>
+                <input type="number" class="form-control" id="precoPizza" name="precoPizza">
+            </div>
+            <div class="form-group">
+                <label for="fotoPizza">Foto da Pizza</label>
+                <input type="file" class="form-control" id="fotoPizza" name="fotoPizza">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Finaliza Cadastro</button>
+            </div>
+          </form>
+
+    </main>
+</body>
+</html>
